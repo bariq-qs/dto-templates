@@ -1,0 +1,114 @@
+@import "@/assets/styles/scss/variable.scss";
+.timeline {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: calc(20% + 15px);
+    bottom: 0px;
+    border: 1px dashed $color-blue-grey-lighten-3;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .entry {
+    clear: both;
+    text-align: left;
+    position: relative;
+    .title {
+      margin-bottom: 0.5em;
+      float: left;
+      width: 20%;
+      padding-right: 30px;
+      text-align: right;
+      position: relative;
+      .text-time {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-blue-grey;
+      }
+      .node {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border: 6px solid $color-blue-grey-lighten-3;
+        background-color: #fff;
+        border-radius: 100%;
+        top: 15%;
+        right: -22px;
+      }
+      p {
+        margin: 0;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    .section-right {
+      margin: 0 0 3em;
+      float: right;
+      width: 80%;
+      padding-left: 30px;
+      .title-body {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: black;
+      }
+      .sub-title-body {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        color: $color-blue-grey !important;
+      }
+    }
+  }
+  &:first-child {
+    .entry {
+      .title {
+        .node {
+          border: 8px solid $primary-color !important;
+          right: -24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .timeline {
+    &:before {
+      left: calc(30% + 15px);
+    }
+    .entry {
+      .title {
+        width: 30% !important;
+      }
+      .section-right {
+        width: 70% !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timeline {
+    &:before {
+      left: calc(40% + 15px);
+    }
+    .entry {
+      .title {
+        width: 40% !important;
+      }
+      .section-right {
+        width: 60% !important;
+      }
+    }
+  }
+}

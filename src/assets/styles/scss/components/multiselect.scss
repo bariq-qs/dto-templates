@@ -1,0 +1,88 @@
+@import '../variable.scss';
+
+
+.input-primary {
+  .multiselect-options {
+    .multiselect-option {
+      span {
+        font-size: $body1;
+      }
+    }
+  }
+  .multiselect-input {
+    border-radius: 0.5rem;
+  }
+
+  .multiselect-placeholder {
+    font-size: $body1;
+  }
+}
+
+.multiselect-tag {
+  background: $color-orange-lighten-4;
+  border: 1px solid $color-orange-darken-1;
+  border-radius: 6px;
+  color: $color-orange-darken-1;
+}
+
+.multiselect-options .is-selected {
+  background: $color-orange-lighten-5 !important;
+}
+
+.sm-multiselect {
+  .multiselect-input {
+    .multiselect-single-label {
+      font-size: 1rem;
+    }
+    .multiselect-search {
+      input {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.multiselect-tag i:before {
+  color: black;
+}
+
+.is-disabled .multiselect-tag {
+  background: $color-orange-lighten-4 !important;
+}
+
+.is-disabled .multiselect-input {
+  background: inherit !important;
+  opacity: 0.7 !important;
+}
+
+.multiselect-options :hover {
+  background: $color-orange-lighten-4;
+}
+
+.can-not-empty {
+  .multiselect-clear {
+    display: none;
+  }
+}
+
+.no-box-shadow {
+  .multiselect-input {
+    .multiselect-search {
+      input:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.no-border {
+  .multiselect-input {
+    border: none
+  }
+
+  .multiselect-options {
+    border: none;
+  }
+}

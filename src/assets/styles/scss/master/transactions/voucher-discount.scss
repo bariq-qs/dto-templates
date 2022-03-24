@@ -1,0 +1,23 @@
+@import "../../variable.scss";
+.card-voucher-discount {
+  border-radius: 10px;
+  filter: drop-shadow(0px 5.06091px 7.59137px rgba(0, 0, 0, 0.16));
+  padding: 10px;
+  .header-card {
+    border-radius: 8px;
+    img {
+      min-height: 120px;
+      max-height: 150px;
+      object-fit: cover;
+    }
+  }
+  .text-color-grey {
+    color: #707070;
+  }
+}
+
+.container-add-prams {
+  border: 1px dashed $color-blue-grey;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
