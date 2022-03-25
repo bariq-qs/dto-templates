@@ -30,8 +30,8 @@ class Remote implements IRemote {
     this.header = header
     this.data = data
 
-    this.header.key = ''
-    this.header.timeout = 5000
+    // this.header.key = '8dc03f99fdd4a3ab7dc5ca0bc2dc4dbe'
+    // this.header.timeout = 5000
   }
 
   get() {

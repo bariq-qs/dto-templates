@@ -10,4 +10,4 @@
 </div>
 </template>
 
-<script src="@/composables/components/molecules/InputIconRightGrey/inputIconRightComposable.ts" lang="ts"></script>
+<script src="@/composable/components/molecules/InputIconRightGrey/inputIconRightGreyComposable.ts" lang="ts"></script>

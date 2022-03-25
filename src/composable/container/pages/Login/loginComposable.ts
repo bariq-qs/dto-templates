@@ -1,5 +1,8 @@
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import {
+  provinceUseCase
+} from '@/utils/domain/usecase'
 
 export default {
   setup() {

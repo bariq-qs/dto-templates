@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 // import networkBoundResource from '@/data/networkBoundResource'
-import store from '@/store'
-import { Response } from '@/domain/entities'
+
+import { Response } from '@/utils/domain/entities'
 
 class Repository {
   remote: any
@@ -31,6 +31,7 @@ class Repository {
       } else if (code === 200) {
         // eslint-disable-next-line no-prototype-builtins
         if (typeof result.value === 'object' || Array.isArray(result.value)) {
+          console.log('masuk nih yakk')
           data.result = result.value
         } else {
           data.result = result
@@ -41,10 +42,8 @@ class Repository {
         data.message = `${fetch.data.Header} ${fetch.data.Detail}`
         data.result = fetch.data.value
       }
-      if ('@odata.count' in result) {
-        data.count = result['@odata.count']
-      }
       data.code = fetch.status
+      console.log('data after', data)
     } catch (e: any) {
       if (typeof e.response === 'undefined') {
         data.error = true

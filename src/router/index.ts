@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-const routes: Array<RouteRecordRaw> = [
+const routes = [
   {
     path: '/',
     name: 'Login',
@@ -25,7 +25,8 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const isAuth = Boolean(localStorage.getItem('isAuth')) as any
+  const isAuth = localStorage.getItem('isAuth') === 'true'
+  console.log('any auth', isAuth)
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     if (isAuth === true) {
       next()

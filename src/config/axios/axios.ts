@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-const API_URL = 'https://api.rajaongkir.com/starter/'
+const API_URL = 'https://jsonplaceholder.typicode.com/'
 const axl = axios.create({
   baseURL: API_URL,
-  withCredentials: true,
+  // withCredentials: true,
   headers: {
-    'Content-Type': 'application/json; charset=utf-8',
+    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     Accept: '*/*',
   },
 })
