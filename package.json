@@ -7,17 +7,20 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "node server.js"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "autoprefixer": "^9.8.8",
     "axios": "^0.26.1",
     "core-js": "^3.6.5",
+    "express": "^4.17.3",
     "postcss": "^7.0.39",
     "primeicons": "^5.0.0",
     "primevue": "^3.12.2",
     "register-service-worker": "^1.7.1",
+    "serve-static": "^1.15.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
